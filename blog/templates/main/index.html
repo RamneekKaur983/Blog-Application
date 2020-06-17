@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %} {% block content %}
+
+<h1>Ramneek is trying to do something useful in the history of lockdown</h1>
+<h5>Top 10 articles</h5>
+<ul>
+    {% for article in latest_articles %}
+
+
+    <li><a href="{% url 'get_article'  article.id  %}">{{article}}</a></li>
+
+    {% endfor %}
+
+</ul>
+
+{% endblock %}
